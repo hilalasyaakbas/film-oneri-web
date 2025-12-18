@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRave - Bir Film Seçelim</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <style>
+        /* Film afişlerine özel parlama efekti */
+        .movie-poster:hover {
+            outline: 3px solid var(--color-secondary);
+            outline-offset: 4px;
+            box-shadow: 0 0 30px rgba(255, 140, 66, 0.5);
+        }
+        
+        /* Sayfa yüklenme animasyonu */
+        .content-card {
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(20px); }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-100 min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
+
+    <div class="w-full min-h-screen flex flex-col items-center justify-center wavy-bg py-10 sm:py-0 relative">
+        
+        <header class="main-header flex justify-end">
+            <div class="logo-container">
+                <div class="logo-content">
+                    <div class="w-12 h-12 bg-white rounded-full flex flex-col items-center justify-center border-2 border-primary shadow-md">
+                        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-extrabold text-primary ml-2 tracking-tighter">MOVIERAVE</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="absolute top-0 left-0 w-full h-16 bg-secondary z-40 decorative-overlay"></div>
+        <div class="bottom-strip"></div>
+
+        <div class="content-card w-full max-w-6xl mx-auto bg-primary rounded-3xl p-6 sm:p-12 z-20 shadow-2xl relative">
+            
+            <h1 class="text-sm text-white font-semibold absolute top-4 left-6 hidden sm:block opacity-60">giriş ekranı · Primary · 1280 +</h1>
+
+            <div class="text-center mt-10 sm:mt-16 mb-16">
+                <h2 style="color: white; text-shadow: 3px 3px 0px #ff8c42;" class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+                    I'm here for you
+                </h2>
+                <p class="text-xl sm:text-2xl font-semibold text-gray-300 mb-8">
+                    Let's choose a film for you
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button class="px-8 py-3 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-gray-100 transition duration-200 transform hover:scale-105 active:scale-95">
+                        Sign In
+                    </button>
+                    <button class="px-8 py-3 bg-secondary text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 transition duration-200 transform hover:scale-105 active:scale-95">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-poster-container pt-8 -mx-6 sm:-mx-12 overflow-hidden">
+                <div id="carousel-track" class="carousel-track snap-x snap-mandatory pb-8">
+                    
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/591638/FFFFFF?text=Léon" alt="Léon" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/FF8C42/591638?text=Yan+Yana" alt="Yan Yana" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/1e293b/FFFFFF?text=BLACK+SWAN" alt="Black Swan" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/0f172a/FFFFFF?text=TITANIC" alt="Titanic" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/7c3aed/FFFFFF?text=MY+LEFT+FOOT" alt="My Left Foot" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+                    
+                    <div class="movie-poster-item">
+                        <div class="movie-poster rounded-xl overflow-hidden shadow-2xl border border-white/10 h-full">
+                            <img src="https://placehold.co/400x600/591638/FFFFFF?text=Léon" alt="Léon" class="w-full object-cover aspect-[2/3]">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const track = document.getElementById('carousel-track');
+        let scrollAmount = 0;
+        let isHovered = false;
+
+        track.addEventListener('mouseenter', () => isHovered = true);
+        track.addEventListener('mouseleave', () => isHovered = false);
+
+        setInterval(() => {
+            if (!isHovered) {
+                scrollAmount += 1;
+                if (scrollAmount >= track.scrollWidth - track.clientWidth) {
+                    scrollAmount = 0;
+                }
+                track.scrollLeft = scrollAmount;
+            }
+        }, 20);
+    </script>
+
+</body>
+</html>

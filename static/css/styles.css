@@ -1,0 +1,102 @@
+/* Proje için özel renkler ve fontlar */
+:root {
+    --color-primary: #591638;
+    --color-secondary: #ff8c42;
+    --color-light-background: #f7e1d7;
+}
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.text-primary { color: var(--color-primary); }
+.font-inter { font-family: 'Inter', sans-serif; }
+
+/* Arka plan deseni */
+.wavy-bg {
+    background-color: var(--color-light-background);
+    position: relative;
+}
+.wavy-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px; 
+    background: linear-gradient(180deg, 
+        var(--color-primary) 0%, 
+        var(--color-primary) 40%, 
+        rgba(89, 22, 56, 0.8) 60%, 
+        rgba(89, 22, 56, 0.4) 80%, 
+        transparent 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    z-index: 10;
+    opacity: 0.95;
+}
+/* Header */
+.main-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 50; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.logo-container {
+    position: relative;
+    background-color: var(--color-secondary); 
+    border-bottom-left-radius: 9999px;
+    padding: 1rem 3rem 1rem 1rem;
+    transform: skewX(-10deg); 
+    margin-right: -10px; 
+}
+.logo-content {
+    transform: skewX(10deg); 
+    display: flex;
+    align-items: center;
+}
+
+/* Ana içerik kartı */
+.content-card {
+    z-index: 20;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(20px); 
+}
+
+/* Footer */
+.bottom-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-secondary);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    z-index: 10;
+}
+
+/* Carousel */
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.movie-poster-item {
+    flex: 0 0 auto;
+    padding: 0 8px;
+    scroll-snap-align: start;
+    width: 70%;
+}
+@media (min-width: 640px) { .movie-poster-item { width: 50%; } }
+@media (min-width: 768px) { .movie-poster-item { width: 33.33%; } }
+@media (min-width: 1024px) { .movie-poster-item { width: 25%; } }
+
+.movie-poster {
+    transition: transform 0.3s ease-in-out;
+    transform: rotateY(-5deg) translateZ(0); 
+}
+.movie-poster:hover {
+    transform: rotateY(0deg) translateZ(20px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+

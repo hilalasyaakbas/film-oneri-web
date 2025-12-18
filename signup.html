@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRave - Kayıt Ol</title>
+    
+    <link rel="stylesheet" href="static/css/login.css">
+
+    <style>
+        /* Sadece bu sayfadaki form kartına özel giriş animasyonu */
+        .form-card {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link:hover {
+            color: #ff8c42 !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-box">
+            <div class="logo-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4h-2l2 4H7l-2-4H3v16h18V4h-3z"/>
+                </svg>
+            </div>
+            <span class="logo-name">MOVIERAVE</span>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="form-card">
+            <h1 style="letter-spacing: 2px; border-bottom: 2px solid #ff8c42; display: inline-block; padding-bottom: 5px;">
+                Create Account
+            </h1>
+            
+            <p class="subtitle">Join the MovieRave community</p>
+
+            <form>
+                <div class="input-field">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+
+                <div class="input-field">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@example.com">
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="********">
+                </div>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </form>
+
+            <div class="card-footer">
+                <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                <a href="index.html" class="back-link">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
