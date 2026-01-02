@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(172deg, #441930 43%, transparent 43.2%),
+        linear-gradient(8deg, #efcdbb 57%, #f1985e 57.2%);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.logo-box {
+    background-color: #f1985e;
+    padding: 10px 25px;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-name {
+    color: #441930;
+    font-weight: bold;
+}
+
+/* MAIN */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.form-card {
+    background-color: #441930;
+    padding: 40px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 420px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.subtitle {
+    color: #a48a98;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.input-field {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #d1bdc8;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #592b43;
+    color: white;
+}
+
+.btn-signup {
+    width: 100%;
+    background-color: #f1985e;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}

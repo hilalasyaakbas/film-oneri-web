@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRave - Kayıt Ol</title>
+
+    <!-- ✅ FLASK STATIC CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+
+    <style>
+        .form-card {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-link:hover {
+            color: #ff8c42 !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <!-- ✅ LOGO → HOME -->
+    <a href="{{ url_for('home') }}" class="logo-box" style="text-decoration: none;">
+        <div class="logo-circle">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4h-2l2 4H7l-2-4H3v16h18V4h-3z"/>
+            </svg>
+        </div>
+        <span class="logo-name">MOVIERAVE</span>
+    </a>
+</header>
+
+<div class="main-container">
+    <div class="form-card">
+        <h1 style="letter-spacing: 2px; border-bottom: 2px solid #ff8c42; display: inline-block; padding-bottom: 5px;">
+            Create Account
+        </h1>
+
+        <p class="subtitle">Join the MovieRave community</p>
+
+    <form method="POST" action="/signup">
+    <div class="input-field">
+        <label>Full Name</label>
+        <input type="text" name="fullname" placeholder="John Doe">
+    </div>
+
+    <div class="input-field">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="name@example.com">
+    </div>
+
+    <div class="input-field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="********">
+    </div>
+
+    <button type="submit" class="btn-signup">Sign Up</button>
+</form>
+
+
+        <div class="card-footer">
+            <p>
+                Already have an account?
+                <a href="{{ url_for('signin') }}">Sign In</a>
+            </p>
+
+            <a href="{{ url_for('home') }}" class="back-link">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
