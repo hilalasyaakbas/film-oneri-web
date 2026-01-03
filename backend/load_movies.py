@@ -1,6 +1,6 @@
 import csv
 import os
-from app import app
+from backend.app import app
 from models import db, Movie
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
