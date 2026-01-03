@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-# 1️⃣ USER TABLE
+# USER TABLE
 class User(db.Model):
     __tablename__ = "users"
 
@@ -15,7 +15,7 @@ class User(db.Model):
         return f"<User {self.email}>"
 
 
-# 2️⃣ MOVIE TABLE
+# MOVIE TABLE
 class Movie(db.Model):
     __tablename__ = "movies"
 
@@ -28,7 +28,7 @@ class Movie(db.Model):
         return f"<Movie {self.title}>"
 
 
-# 3️⃣ RATING TABLE (USER ↔ MOVIE)
+# RATING TABLE (USER ↔ MOVIE)
 class Rating(db.Model):
     __tablename__ = "ratings"
 
