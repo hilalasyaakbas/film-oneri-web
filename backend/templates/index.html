@@ -11,7 +11,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- ✅ FLASK STATIC CSS -->
+    <!-- FLASK STATIC CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
     <style>
@@ -76,29 +76,33 @@
             </div>
         </div>
 
-        <div class="movie-poster-container pt-8 overflow-hidden">
-            <div id="carousel-track" class="carousel-track flex gap-6 overflow-x-auto pb-8">
+      <div class="movie-poster-container pt-8 overflow-hidden">
+    <div id="carousel-track" class="carousel-track flex gap-6 overflow-x-auto pb-8 px-4">
 
-                <div class="movie-poster rounded-xl overflow-hidden shadow-2xl">
-                    <img src="https://placehold.co/400x600/591638/FFFFFF?text=Léon" class="w-full object-cover">
-                </div>
+        <div class="movie-poster min-w-[280px] rounded-xl overflow-hidden shadow-2xl transition-transform hover:scale-105">
+            <img src="https://upload.wikimedia.org/wikipedia/tr/d/d5/Yan_Yana.jpg" 
+                 class="w-full h-[420px] object-cover">
+        </div>
 
-                <div class="movie-poster rounded-xl overflow-hidden shadow-2xl">
-                    <img src="https://placehold.co/400x600/FF8C42/591638?text=Yan+Yana" class="w-full object-cover">
-                </div>
+        <div class="movie-poster min-w-[280px] rounded-xl overflow-hidden shadow-2xl transition-transform hover:scale-105">
+            <img src="https://www.tallengestore.com/cdn/shop/products/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_9ef86295-4756-4c71-bb4e-20745c5fbc1a.jpg?v=1582781084" 
+                 class="w-full h-[420px] object-cover">
+        </div>
 
-                <div class="movie-poster rounded-xl overflow-hidden shadow-2xl">
-                    <img src="https://placehold.co/400x600/1e293b/FFFFFF?text=BLACK+SWAN" class="w-full object-cover">
-                </div>
+        <div class="movie-poster min-w-[280px] rounded-xl overflow-hidden shadow-2xl transition-transform hover:scale-105">
+            <img src="https://images-cdn.ubuy.com.tr/67b6c1f0a7375650700dda27-disney-movie-pixar-kids-animated-film.jpg" 
+                 class="w-full h-[420px] object-cover">
+        </div>
 
-                <div class="movie-poster rounded-xl overflow-hidden shadow-2xl">
-                    <img src="https://placehold.co/400x600/0f172a/FFFFFF?text=TITANIC" class="w-full object-cover">
-                </div>
+        <div class="movie-poster min-w-[280px] rounded-xl overflow-hidden shadow-2xl transition-transform hover:scale-105">
+            <img src="https://assets.mubicdn.net/images/notebook/post_images/12001/images-w1400.jpg?1348745411" 
+                 class="w-full h-[420px] object-cover">
+        </div>
 
-            </div>
+    </div> 
+</div>
         </div>
     </div>
-</div>
 
 <script>
     const track = document.getElementById('carousel-track');
